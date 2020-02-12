@@ -1,4 +1,5 @@
 ##tính trung vị
+
 def calculate_median(data):
   data.sort()
   n = len(data)
