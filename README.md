@@ -1,15 +1,9 @@
-# tính e theo công thức: e = 1+ 1/1! + 1/2! + ... + 1/n!
+### tìm số, mà xuất hiện nhiều nhất trong list -> số 5
 
-def factorial(n):
-  if (n==0) or (n==1) :
-    return 1
-  else: 
-    return n*factorial(n-1)
-def estimate_e(n):
-  if n==0:
-    return 1
-  elif n==1:
-    return 2
-  else:
-    return 1/factorial(n) + estimate_e(n-1)
-print(estimate_e(10))
+from collections import Counter
+data = [1,2,3,4,5,5,5,5,1,1,2,]
+def calculate_mode(data):
+   c = Counter(data)
+   mode = c.most_common(1)
+   return mode[0][0]
+print(calculate_mode(data))
